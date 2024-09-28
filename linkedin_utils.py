@@ -1,4 +1,5 @@
 import time
+import requests
 import pandas as pd
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
@@ -193,3 +194,10 @@ def get_gpt_response(question):
             return answer
     raise Exception(f"Cannot find answer within limits for question - {question}")
     
+def send_telegram_message(group_id, message_text, api_url):
+    parameters = {
+      "chat_id": group_id,
+      "text": message_text
+    }
+
+    requests.get(api_url + "/sendMessage", data=parameters)
