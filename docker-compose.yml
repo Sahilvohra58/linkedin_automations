@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  linkedin_commenter:
+    container_name: "linkedin_commenter_container"
+    command: "python3 linkedin_commenter_code.py"
+    # command: "run.sh"
+    
+    # ports: 
+    #   - 1234:1234 
+    build:
+      context: .
+      dockerfile: Dockerfile
