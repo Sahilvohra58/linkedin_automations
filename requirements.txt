@@ -1,2 +1,4 @@
-selenium==4.9.1
-webdriver_manager==4.0.0
+selenium==4.25.0
+webdriver_manager==4.0.2
+pandas==2.2.3
+openai==1.50.2
